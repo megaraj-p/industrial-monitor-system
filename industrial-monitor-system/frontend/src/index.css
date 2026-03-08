@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        box-sizing: border-box;
+    }
+
+    html,
+    body,
+    #root {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: #0f1117;
+        color: #e6edf3;
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #161b22;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #30363d;
+        border-radius: 3px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #484f58;
+    }
+}
+
+@layer components {
+    .card {
+        @apply bg-surface-raised border border-surface-border rounded-xl p-4;
+    }
+
+    .badge-critical {
+        @apply bg-accent-red/20 text-accent-red border border-accent-red/40 text-xs px-2 py-0.5 rounded-full font-medium;
+    }
+
+    .badge-warning {
+        @apply bg-accent-yellow/20 text-accent-yellow border border-accent-yellow/40 text-xs px-2 py-0.5 rounded-full font-medium;
+    }
+
+    .badge-info {
+        @apply bg-accent-blue/20 text-accent-blue border border-accent-blue/40 text-xs px-2 py-0.5 rounded-full font-medium;
+    }
+
+    .badge-ok {
+        @apply bg-accent-green/20 text-accent-green border border-accent-green/40 text-xs px-2 py-0.5 rounded-full font-medium;
+    }
+}
